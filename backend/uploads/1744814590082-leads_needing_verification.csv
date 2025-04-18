@@ -1,0 +1,9 @@
+id,name_of_lead,email_id,contact_number,leadType,status,notes
+1,Rahul Sharma,rahul.s@gmail,9876543210,High Interest,Needs Verification,Invalid email format
+2,Priya Patel,priya.p@outlook.com,8765432,Medium Interest,Needs Verification,Phone number too short
+3,Amit Kumar,amit.k@yahoo.com,,Low Interest,Needs Verification,Missing phone number
+4,Vikram Reddy,vikram.r@@hotmail.com,5432109876,Medium Interest,Needs Verification,Email has double '@'
+5,Meera Joshi,,9876543211,High Interest,Needs Verification,Missing email
+6,Sara Khan,sara.k@domain.com,1234567890,Low Interest,Needs Verification,Possible duplicate
+7,Dev Mehta,dev.m#gmail.com,9876543212,Medium Interest,Needs Verification,Invalid character in email
+8,Neha Desai,neha.d@,9123456789,High Interest,Needs Verification,Incomplete email domain

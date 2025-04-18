@@ -1,0 +1,453 @@
+/* Dashboard.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 60px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #6a1b9a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.header h1 {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.help-icon {
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.circle-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  text-align: center;
+  line-height: 24px;
+  color: #555;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+}
+
+/* Main content styles */
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Content area styles */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Lead Summary Cards */
+.summary-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.card-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 16px;
+}
+
+.card-icon.new {
+  background-color: #6a1b9a;
+}
+
+.card-icon.existing {
+  background-color: #6a1b9a;
+}
+
+.card-icon.prospects {
+  background-color: #6a1b9a;
+}
+
+.card-icon.pending {
+  background-color: #6a1b9a;
+}
+
+.card-label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.card-value {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 5px 0;
+  color: #333;
+}
+
+.card-description {
+  font-size: 12px;
+  color: #888;
+}
+
+.card-action {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.purple {
+  background-color: #6a1b9a;
+  color: white;
+}
+
+/* Quick Actions */
+.quick-actions {
+  margin-bottom: 30px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Lead Management Cards */
+.lead-management-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.lead-card {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+  min-height: 180px;
+}
+
+.lead-card-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #6a1b9a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.lead-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.lead-card-description {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.lead-card-action {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Promotion Tools Cards */
+.promotion-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.promotion-card {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+  min-height: 180px;
+}
+
+.promotion-card-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.promotion-card-icon.whatsapp {
+  background-color: #25D366;
+}
+
+.promotion-card-icon.call {
+  background-color: #007BFF;
+}
+
+.promotion-card-icon.reminder {
+  background-color: #FFC107;
+}
+
+.promotion-card-icon.status {
+  background-color: #6a1b9a;
+}
+
+.promotion-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.promotion-card-description {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.promotion-card-action {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Pending Follow-ups Table */
+.follow-ups-table {
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 12px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #333;
+}
+
+td:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  margin-right: 10px;
+  color: #888;
+}
+
+.icon-button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/* Analytics Cards */
+.analytics-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.analytics-card {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+  min-height: 180px;
+}
+
+.analytics-card-icon {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.analytics-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.analytics-card-description {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.analytics-card-action {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Add watermark-like background */
+.content {
+  position: relative;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='rgba(106, 27, 154, 0.05)'/%3E%3Ctext x='50' y='55' font-family='Arial' font-size='12' text-anchor='middle' fill='rgba(106, 27, 154, 0.1)'%3ETalent Corner%3C/text%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .summary-cards, .lead-management-cards, .promotion-cards, .analytics-cards {
+    flex-wrap: wrap;
+  }
+  
+  .summary-card, .lead-card, .promotion-card, .analytics-card {
+    flex: 0 0 calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .summary-card, .lead-card, .promotion-card, .analytics-card {
+    flex: 0 0 100%;
+  }
+}

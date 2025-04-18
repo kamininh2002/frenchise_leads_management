@@ -1,0 +1,409 @@
+.leads-management-page {
+  padding: 0;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* General styles for the search box container */
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon styles */
+.search-box .icon {
+  font-size: 18px;
+  color: #555; /* Neutral gray color for icons */
+  margin-right: 10px; /* Space between icon and input field */
+}
+
+/* Input field styles */
+.search-box input {
+  flex-grow: 1; /* Makes input field take up remaining space */
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 8px;
+  background-color: transparent; /* Transparent to blend with white box */
+}
+
+/* Placeholder text styling */
+.search-box input::placeholder {
+  color: #999; /* Light gray placeholder text */
+}
+
+/* Hover effect for the search box */
+.search-box:hover {
+  background-color: #ffffff; /* Ensures white background on hover */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow effect */
+}
+
+/* Focus effect for the input field */
+.search-box input:focus {
+  background-color: #ffffff; /* Keeps white background when focused */
+}
+
+.filter-dropdown {
+  position: relative;
+}
+
+.filter-dropdown button {
+  display: flex;
+  align-items: center;
+}
+
+.filter-dropdown button i {
+  margin-left: 8px;
+}
+
+/* Add Source Dropdown Styling */
+.source-dropdown {
+  position: relative;
+}
+
+.add-source-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.add-source-dropdown input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.add-source-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-source-actions button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-source-actions .add-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.add-source-actions .cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Notification Popup Styling */
+.notification-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+.notification-content {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+.notification-content i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+.leads-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    background-color: #ffffff; /* Optional: Add a light background to the entire tab container */
+    padding: 5px 0; /* Add some padding to the top and bottom */
+    border-radius: 8px; /* Optional: Round the corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Optional: Add a subtle shadow */
+}
+
+.tab {
+    padding: 10px 15px;
+    border: none;
+    background-color: #fff; /* Change to white or a light color */
+    color: #555; /* Darker text for better readability */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition */
+    border-radius: 6px; /* Round the corners of the buttons */
+    margin: 2px 5px; /* Add some spacing between the buttons */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Add a subtle shadow to each button */
+}
+
+.tab:hover {
+    background-color: #e9ecef; /* Lighter background on hover */
+    color: #333; /* Darker text on hover */
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2); /* Slightly increase shadow on hover */
+}
+
+.tab.active {
+    background-color: #007bff; /* Blue color for active tab */
+    color: white; /* White text for active tab */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Increase shadow for active state */
+}
+
+.tab:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background-color: #ddd; /* Light gray for disabled state */
+    color: #777;
+    box-shadow: none; /* Remove shadow for disabled state */
+}
+
+.tab:disabled:hover {
+    background-color: #ddd; /* Keep the same background color on hover when disabled */
+    box-shadow: none; /* Ensure no shadow on hover when disabled */
+}
+
+
+.leads-count {
+  font-weight: 500;
+}
+
+.leads-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.leads-table-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.leads-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leads-table tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.leads-table tr:last-child {
+  border-bottom: none;
+}
+
+.leads-table td {
+  padding: 16px;
+  font-size: 14px;
+}
+
+/* Add these styles to your LeadsManagement.css file */
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Card */
+.popup-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+
+.save-btn, .cancel-btn, .edit-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.save-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Card Title */
+.popup-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Card Content */
+.popup-card p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.popup-card strong {
+  font-weight: 600;
+  color: #555;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.view-btn,
+.edit-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.view-btn {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+}
+
+.edit-btn {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.view-btn:hover {
+  background-color: #bbdefb;
+}
+
+.edit-btn:hover {
+  background-color: #c8e6c9;
+}
+
+.lead-user {
+  display: flex;
+  align-items: center;
+}
+
+.lead-user i {
+  margin-right: 8px;
+}
+
+.lead-contact {
+  color: #666;
+}
+
+.lead-interest,
+.lead-status {
+  font-weight: bold;
+}
+
+.lead-interest.high-interest {
+  color: #4caf50;
+}
+.pagination-btn {
+  background-color: #6a0dad; /* Purple color */
+  color: #ffffff; /* White text */
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-btn:hover {
+  background-color: #5a0c9c; /* Darker purple for hover effect */
+}
+
+
